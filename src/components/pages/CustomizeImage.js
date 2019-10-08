@@ -1,25 +1,34 @@
 import React, {useState} from 'react';
 
 export default function CustomizeImage(){
-  const [url, setUrl] = useState('')
-  const [size, setSize] = useState('');
+  const [state, setState] = useState({
+    url : "",
+    size : ""
+  })
+  
 
   function handleInputChange(e){
     const value = e.target.value
-    setUrl(value)
+    setState({
+      ...state,
+      url : value
+    })
   }
 
   function handleRangeChange(e){
     const value = e.target.value
-    setSize(value)
+    setState({
+      ...state,
+      size : value
+    })
   }
 
   function customize(){
 
-    if (url && size){
+    if (state.url && state.size){
       return(
         <>
-      <img src={url} width={size} height={size}/>
+      <img src={state.url} width={state.size} height={state.size}/>
       </>
       )
     }
@@ -30,8 +39,8 @@ export default function CustomizeImage(){
       <h1>Customize Image</h1>
       <input type="text" name="url" onChange={handleInputChange}/>
       <input type="range" name="size" min='0' max = '200' onChange={handleRangeChange}/>
-      <p>{size}x{size}</p>
-      {customize(url)}
+      <p>{state.size}x{state.size}</p>
+      {customize(state.url)}
     </div>
   )
 }

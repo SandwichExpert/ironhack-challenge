@@ -15,9 +15,52 @@ nav{
   color:red;
 }
 
+tr:hover{
+  cursor: pointer;
+}
+
 .container{
   display:flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items:center; 
 }
+
+.left-celebrities{
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  align-content:center;
+  width:25vw;
+}
+
+.right-celebrities{
+  display:flex;
+  flex-flow: column wrap; 
+  justify-content:flex-start;
+  align-items:center; 
+  align-content: center;
+  text-align:center;
+  margin-left:20px;
+  width:55vh;
+}
+
+.celebsList{
+  display:flex;
+  flex-flow: row nowrap;
+}
+
+.active_name{
+  font-weight : 800;
+}
+
+.celebsContainer{
+  display:flex;
+  flex-flow: row wrap;
+  width : 80vw;
+}
+
+.definite{
+  width : 500px;
+}
+

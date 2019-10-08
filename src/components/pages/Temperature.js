@@ -11,31 +11,31 @@ export default function Temperature(){
   }
 
   function temperatureStyle(){
+    let color
+    let text
     if(!temperature){
-      return(
-        <p style ={{color: "green"}}>Waiting for the temperature</p>
-      )
+      text = 'Waiting for the temperature'
+      color = "green"
+      
     }
     else if(temperature <= 0){
-      return (
-        <p style ={{color: "aliceblue", background:'dodgerblue'}}>It's freezing!</p>
-      )
+      
+      text = "It's freezing!"
+      color = "dodgerblue"
     }
     else if(temperature <= 10){
-      return (
-        <p style ={{color: "blue"}}>It's cold!</p>
-      )
+      text = "It's cold!"
+      color = "blue"
     }
     else if (temperature > 10 && temperature <= 30){
-      return (
-        <p style ={{color: "black"}}>It's nice!</p>
-      )
+      text = "It's nice!"
+      color = "black"
     }
     else if(temperature > 30){
-      return (
-        <p style ={{color: "red"}}>It's hot!</p>
-      )
+      text = "It's hot!"
+      color = "red"
     }
+    return (<div style={{color : color}}>{text}</div>)
   }
 
 
@@ -43,7 +43,7 @@ export default function Temperature(){
     <div className='container'>
       <h1 >Temperature</h1>
       <input type='number'onChange={getTemperature}/>
-      <p>{temperatureStyle()}</p>
+      {temperatureStyle()}
       
     </div>
   )
