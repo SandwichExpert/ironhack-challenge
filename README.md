@@ -4,6 +4,8 @@
 
 This Github repository is a solution to the Ironhack coding challenge
 
+a preview is available here : https://gallant-thompson-b02349.netlify.com/
+
 ## Commands
 
 To first start the project, run : 
