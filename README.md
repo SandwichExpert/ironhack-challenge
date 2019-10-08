@@ -22,3 +22,8 @@ To build a deployable version, type :
 ```sh
 npm run build
 ```
+
+## Technologies Used: 
+- [React](https://reactjs.org) bootstrapped with `create-react-app`
+- [React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Axios](https://github.com/axios/axios) to call APIs
